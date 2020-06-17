@@ -53,6 +53,8 @@ BotanEDPublicKey::BotanEDPublicKey()
 	edkey = NULL;
 }
 
+~BotanEDPublicKey() = delete;
+
 BotanEDPublicKey::BotanEDPublicKey(const Botan::Public_Key* inEDKEY)
 {
 	edkey = NULL;
