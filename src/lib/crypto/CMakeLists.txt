@@ -129,13 +129,13 @@ if(WITH_BOTAN)
                         )
 endif(WITH_BOTAN)
 
-if(WITH_EDSA)
+if(WITH_BOTAN AND WITH_EDSA)
 	list(APPEND SOURCES 
                         BotanEDKeyPair.cpp
                         BotanEDPrivateKey.cpp
                         BotanEDPublicKey.cpp
 			)
-endif(WITH_EDSA)
+endif(WITH_BOTAN AND WITH_EDSA)
 include_directories(${INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} OBJECT ${SOURCES})
