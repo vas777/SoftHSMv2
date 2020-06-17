@@ -59,7 +59,6 @@ BotanEDPrivateKey::BotanEDPrivateKey()
 {
 	edkey = NULL;
 }
-~BotanEDPrivateKey = delete;
 BotanEDPrivateKey::BotanEDPrivateKey(const Botan::Private_Key* inEDKEY)
 {
 	edkey = NULL;

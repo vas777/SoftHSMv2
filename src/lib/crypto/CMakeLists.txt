@@ -105,9 +105,6 @@ if(WITH_BOTAN)
                         BotanECDSAPrivateKey.cpp
                         BotanECDSAPublicKey.cpp
                         BotanEDDSA.cpp
-                        BotanEDKeyPair.cpp
-                        BotanEDPrivateKey.cpp
-                        BotanEDPublicKey.cpp
                         BotanGOST.cpp
                         BotanGOSTKeyPair.cpp
                         BotanGOSTPrivateKey.cpp
@@ -132,6 +129,13 @@ if(WITH_BOTAN)
                         )
 endif(WITH_BOTAN)
 
+if(WITH_EDSA)
+	list(APPEND SOURCES 
+                        BotanEDKeyPair.cpp
+                        BotanEDPrivateKey.cpp
+                        BotanEDPublicKey.cpp
+			)
+endif(WITH_EDSA)
 include_directories(${INCLUDE_DIRS})
 
 add_library(${PROJECT_NAME} OBJECT ${SOURCES})
